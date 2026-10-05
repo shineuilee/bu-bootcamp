@@ -43,4 +43,14 @@ public class GradeAnalyzerTest {
 
         assertEquals(88.0, GradeAnalyzer.calculateAverage(scores));
     }
+
+    @Test
+    void calculateAverage_returnsCorrectAverage_forTenScores() {
+        ArrayList<Integer> scores =
+                new ArrayList<>(Arrays.asList(
+                        60, 70, 80, 90, 100,
+                        60, 70, 80, 90, 100));
+
+        assertEquals(80.0, GradeAnalyzer.calculateAverage(scores));
+    }
 }
